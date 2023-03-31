@@ -1,9 +1,13 @@
-﻿namespace Libbyrator;
+﻿using Microsoft.Maui.Controls;
 
-public partial class AppShell : Shell
-{
-	public AppShell()
-	{
+namespace Libbyrator;
+
+
+
+public partial class AppShell : Shell {
+
+	public AppShell() {
 		InitializeComponent();
 	}
+
 }
