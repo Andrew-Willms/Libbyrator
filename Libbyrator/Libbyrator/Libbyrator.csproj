@@ -43,7 +43,6 @@
 
 		<!-- Images -->
 		<MauiImage Include="Resources\Images\*" />
-		<MauiImage Update="Resources\Images\dotnet_bot.svg" BaseSize="168,208" />
 
 		<!-- Custom Fonts -->
 		<MauiFont Include="Resources\Fonts\*" />
@@ -54,7 +53,9 @@
 	</ItemGroup>
 
 	<ItemGroup>
+		<PackageReference Include="MediaDevices" Version="1.10.0" />
 		<PackageReference Include="Microsoft.Extensions.Logging.Debug" Version="7.0.0" />
+		<PackageReference Include="NAudio" Version="2.1.0" />
 	</ItemGroup>
 
 </Project>
