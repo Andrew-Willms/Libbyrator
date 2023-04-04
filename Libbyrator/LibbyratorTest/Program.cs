@@ -39,6 +39,8 @@ internal static class Program {
 			}
 		}
 
+		TimeSpan totalDuration = new();
+
 		foreach (FileInfo file in mp3Files) {
 			
 			// for some reason there are some duplicate files so they need to be over written.
@@ -46,6 +48,8 @@ internal static class Program {
 
 			Mp3FileReader reader = new(file.FullName);
 			TimeSpan duration = reader.TotalTime;
+
+			totalDuration += duration;
 
 			Console.WriteLine($"{file.FullName}, {file.Length / 1000000} MB, {duration}");
 		}
@@ -60,6 +64,8 @@ internal static class Program {
 			File.WriteAllBytes($"{file.FullName}.mp3", contents);
 			File.Delete(file.FullName);
 		}
+
+		Console.WriteLine($"Total Duration: {totalDuration}");
 	}
 
 }
